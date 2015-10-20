@@ -3,11 +3,40 @@ img.logo {
     height: 20px;
 }
 
-tr:hover{
+tr:nth-child(2n) {
+    background-color: gray;
+}
+
+tr:hover {
     background-color: #00E6B8;
 }
 
-table tr:nth-child(2n) {
-    background-color: grey;
+thead {
+    background-color: #00E6B8;
 }
 
+table {
+  overflow: hidden;
+}
+
+td {
+  position: relative;
+}
+
+td:hover::before {
+  content: '';
+  position: absolute;
+  background-color: #00E6B8;  
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+button {
+    display: none;
+}
+
+form:valid button {
+    display: inline;
+}
